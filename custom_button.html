@@ -1,0 +1,537 @@
+
+<html>
+<meta name="viewport" content="width=device-width, user-scalable=no"> 
+<!--
+CODE BY:- TEJAS KAPADE
+PROJECT:- CUSTOM BUTTON V.4
+
+USE :- GIVES YOU DESIRED CSS CODE TO USE IN YOUR CODE.
+
+TIME TAKEN:- 8+DAYS ;
+
+CONSIST OF :- HTML, CSS, JS
+
+LINES :- TOTAL OF 518 (for #v.2) 
+
+UPDATE :- ADDED BORDER SHADOW AND VIEW BUTTON.
+
+UPCOMING :- BUTTON HOVER EFFECTS AND SOME SAMPLE BUTTON CODES.
+IN VERSION #3.0.
+
+THANKYOU
+
+@all copyrights are reserved
+
+UNDER GNU
+
+-->
+<body id="body">
+
+<div id="box">
+  <span style="color: grey; font-weight:400;font-family:bold; position:absolute;left:2%;top:2%;font-size:0.8em">Project By Tejas kapade (v.2.0)</span>
+  <span style="color: grey; font-weight:300;font-family:bold; position:absolute;right:13%;bottom:0;">Change Background :</span>
+  <button id="btn">Button</button>
+
+  <input type="button" value="Reset" style="position: absolute;right:0;" onclick="reset()"/>
+<input type="button" value="Back" id="back" style="position: absolute;right:1%;top:4%; background:tomato; border:none;color:#fff; display:none;transition:1s;" onclick="backs()"/>
+<input type="button" value="Andro Coder" id="copyy" style="position: absolute;left:4%;top:72%; background:tomato; border:none;color:#fff; display:none;opacity:0.4;transition:2s;" onclick="copy1()"/>
+
+<input type="button" value="Report issue" id="rib" style="position: absolute;left:4%;top:74.5%; background:tomato; border:none;color:#fff; display:none;opacity:0.5;" onclick="window.location.href = 'https://github.com/tejas-kapade';"/>
+<input type="button" value="Learn Js" id="learn" style="position: absolute;right:4%;top:74.8%; background:tomato; border:none;color:#fff; display:none;opacity:0.5;" onclick="window.location.href = 'https://youtube.com/channel/UChJd6cHlXfwk-oBCBO0dzCg';"/>
+
+<input type="button" value="Hare Krishna" id="krishna" style="position: absolute;right:31%;top:77.8%; background:transparent; border:none;color:#A1A1A1; display:none;opacity:0.8;font-size:1.2em; font-weight:10;"/>
+
+
+<input type="button" value="Change Theme" id="ctheme" style="position: absolute;right:4%;top:72%; background:tomato; border:1px solid grey;color:#fff; display:none;opacity:0.9;transition:0.4s;" onclick="cth()"/>
+
+<input type="button" value="<" style="position: absolute;left:0;bottom:0;" onclick="Left()"/>
+<input type="button" value=">" style="position: absolute;left:8%;bottom:0;" onclick="Right()"/>
+<input type="button" style="position: absolute;left:18%;bottom:0;" value="view" onclick="view()"/ >
+
+  <input type="button" value="Change Name" style="position: absolute;right:16%;" onclick="change()"/>
+  <input id="bkb" type="color" value="#ffffff"/>
+</div>
+
+<div id="container">
+ <span id="txt1">Width: </span><br><input id="inp1" type="range" value="200" min="5" max="600"/><br><br><hr/>
+  <span id="txt2">Height: </span><br><input id="inp2" type="range" value="60" min="5" max="200"/><br><br><hr/>
+  <span id="txt3">Background: </span><input id="inp3" type="color" value="#00FF00"/><br><br><hr/>
+  <span id="txt4">Mix Colour: </span><input id="inp4" type="color" value="#FFFFFF"/><br><br><hr/>
+   <span id="txt11">Colour Degree: </span><input type="range" min="1" max="360" value="150" id="range2"/><br><br><hr/>
+
+   <span id="txt10">Text Size: </span><br><input id="inp10" type="range" value="25" min="5" max ="50"/><br><br><hr/>
+   
+   <span id="txt5">Border width: </span><br><input id="inp5" type="range" value="2" min="0" max="20"/><br><br><hr/>
+  <span id="txt6">Border Colour: </span><input id="inp6" type="color" value="#111"/><br><br><hr/>
+  <span id="txt7">Border Curve: </span><br><input id="inp7" type="range" value="0" min="0" max="50"/><br><br><hr/>
+  <span id="txt8">Text colour: </span><input id="inp8" type="color" value="#111"/><br><br><hr/>
+   <span id="txt9">Text Density: </span><br><input id="inp9" type="range" value="500" min="10" max="900"/><br><br><hr/>
+<span id="txt20">Button Shadow Colour: </span><input id="inp20" type="color" value="#A8A8A8"/><br><br><hr/>
+<span id="txt21">Button Shadow Position-X: </span><input type="range" min="-30" max="30" value="10" id="range20"/><br><br><hr/>
+<span id="txt22">Button Shadow Position-Y: </span><input type="range" min="-30" max="30" value="10" id="range30"/><br><br><hr/>
+<span id="txt25">Button Shadow Blur: </span><br><input type="range" min="0" max="80" value="0" id="range40"/><br>
+<br>
+<button id="str" onclick="start()">Get CSS</button>
+   
+</div>
+<div id="code">
+ <br><br><br><br>click above "Get CSS" button and it will give you exact CSS code that you can copy from here.
+</div>
+
+
+  <script>
+  var body=document.getElementById("body");
+var btn = document.getElementById("btn");
+var code= document.getElementById("code");
+var box= document.getElementById("box");
+var container= document.getElementById("container");
+var back= document.getElementById("back");
+var copyy= document.getElementById("copyy");
+var rib= document.getElementById("rib");
+var ctheme= document.getElementById("ctheme");
+var lk= document.getElementById("krishna");
+var learn= document.getElementById("learn");
+
+//PROJECT BTN#V4 By AndroCoder
+//PROJECT BTN#V4 By AndroCoder
+//PROJECT BTN#V4 By AndroCoder
+//PROJECT BTN#V4 By AndroCoder
+
+var inp1= document.getElementById("inp1");
+var inp2= document.getElementById("inp2");
+var inp3= document.getElementById("inp3");
+var inp4= document.getElementById("inp4");
+var inp5= document.getElementById("inp5");
+var inp6= document.getElementById("inp6");
+var inp7= document.getElementById("inp7");
+var inp8= document.getElementById("inp8");
+var inp9= document.getElementById("inp9");
+var inp10= document.getElementById("inp10");
+var inp11= document.getElementById("range2");
+var bkb= document.getElementById("bkb");
+
+var inp20= document.getElementById("inp20");
+var inp21= document.getElementById("range20");
+var inp30= document.getElementById("range30");
+var inp40= document.getElementById("range40");
+
+box.style.backgroundColor="#fff";
+
+alert("This Web Program is Not a \n 'Responsive Design' That Mean it will appear different for different sized devices . \n 'if there is any issue, \n Contact ig:-@andro_coder OR \n Click Report Button in View '");
+
+
+function start(){
+ code.style.display="block";
+ code.innerHTML= "Your above edited button CSS code as follows : <br><hr/><br>#btn{<br>position: absolute;"+"<br>"+"top:0;<br>"+"left:0;"+"<br>"+"width: "+inp1.value+"px;<br>"+"height:"+inp2.value+"px;<br>"+ "background:linear-gradient("+inp11.value+"deg,"+inp3.value+","+inp4.value+");<br> "+ "font-size: "+inp10.value+"px;<br>"+"border:"+inp5.value+"px solid "+inp6.value+";<br>"+ "border-radius: "+inp7.value+"px;<br>"+"color:"+inp8.value+";<br>"+ "font-weight: "+inp9.value+";<br>"+"box-shadow:"+inp21.value+"px "+inp30.value+"px "+inp40.value+"px "+inp20.value+";<br>"+"}";
+
+}
+
+function ran(min,max){
+this.min=min;
+this.max=max;
+this.val=Math.ceil(Math.random()*(this.max-this.min)+this.min);
+return this.val;
+};
+
+
+
+//setInterval(start,100);
+
+function draw(){
+
+ btn.style.width=inp1.value+"px";
+btn.style.height=inp2.value+"px";
+btn.style. background="linear-gradient("+inp11.value+"deg,"+inp3.value+","+inp4.value+")";
+btn.style.border=inp5.value+"px   "+"solid "+inp6.value;
+btn.style.fontSize=inp10.value+"px";
+
+btn.style.color=inp8.value;
+btn.style.borderRadius=inp7.value+"px";
+btn.style.fontWeight=inp9.value;
+
+
+btn.style.boxShadow=inp21.value+"px "+inp30.value+"px "+inp40.value+"px "+inp20.value;
+
+box.style.backgroundColor=bkb.value;
+
+}
+
+setInterval(draw,10);
+
+//PROJECT BTN#V4 By AndroCoder
+//PROJECT BTN#V4 By AndroCoder
+//PROJECT BTN#V4 By AndroCoder
+//PROJECT BTN#V4 By AndroCoder
+
+function reset(){
+location.reload();
+}
+
+function change(){
+var cnt = prompt("ENTER NAME TO EDIT BUTTON NAME");
+
+btn.innerHTML=cnt;
+}
+
+LV = 20;
+RV = 26;
+
+function Left(){
+LV--;
+btn.style.left = LV +"%";
+}
+function Right(){
+LV++;
+btn.style.left = LV +"%";
+}
+
+function view(){
+box.style.top=1+"%";
+//box.style.border=10+"px solid #111";
+container.style.display = "none";
+box.style.height=800+"px";
+back.style.display="block";
+copyy.style.display = "block";
+rib.style.display = "block";
+ctheme.style.display = "block";
+lk.style.display ="block";
+learn.style.display = "block";
+}
+
+function backs(){
+container.style.display="block";
+box.style.height = 180+"px";
+box.style.top = 2+"%";
+back.style.display = "none";
+copyy.style.display = "none";
+rib.style.display = "none";
+ctheme.style.display = "none";
+lk.style.display = "none";
+learn.style.display = "none";
+}
+var colors=[
+"#FF7400",
+"#00D4FF",
+"#FF00A3",
+"#8F00FF",
+"#00FFE6",
+"#DEFF00"
+];
+
+function cth(){
+ var ccc= "hsl("+ran(0,255)+",100%,"+ran(30,90)+"%)"
+ body.style.background = ccc;
+ 
+ ctheme.style.background=ccc;
+ 
+}
+
+function copy1(){
+/*var gett = code.innerHTML;
+gett.select();
+gett.setSelectionRange(0, 99999);
+document.execCommand("copy");*/
+
+alert(" This is to ensure and a proof that code is original and not copied from anyone.\n @allrightsarereserved \n Thankyou");
+}
+
+
+  </script>
+</body>
+   <style>
+#body{
+background:linear-gradient(140deg,#F7FFC4,#fff
+);
+height:400%;
+}
+#box{
+position: fixed;
+width:350px; height:180px;
+border:1px solid #111;
+left:1%;
+top:2%;
+border-radius:0.2cm;
+background:#fff;
+overflow:hidden;
+z-index:10;
+transition:0.8s;
+}
+#container{
+position: absolute;
+width:350px; height:2220px;
+border:1px solid #111;
+left:1%;
+top:32%;
+font-size:1.2em;
+border-radius:0.2cm;
+font-weight:500;
+font-family: bold;
+text-align: center;
+line-height:60px;
+transition:0.5s;
+z-index:5;
+}
+
+#container input{
+
+font-weight:600;
+font-family: bold;
+text-align: center;
+}
+
+#code{
+position: absolute;
+width:350px; height:400px;
+border:2px solid #FFC200;
+
+left:1%;
+top:379.5%;
+border-radius:0.2cm;
+background:#fff;
+font-weight:600;
+font-family: bold;
+display: block;
+}
+
+#btn{
+position: absolute;
+width:200px;
+height:60px;
+color:#111;
+background:#E1E1E1;
+border:2px solid #111;
+font-size:1.5em;
+font-family:bold;
+font-weight:500;
+top:26%;
+left:20%;
+}
+
+#str{
+position: absolute;
+width:160px;
+height:40px;
+top:104.3%;
+font-size:1.2em;
+font-weight:600;
+background:#FFC200;
+border:2px solid #FFC200;
+border-bottom:none;
+border-radius:0.2cm;
+
+}
+
+#bkb{
+position: absolute;
+bottom:0;right:0;
+}
+
+#range2{
+-webkit-appearance:none;
+appearance:none;
+width:90%;
+height:6px;
+outline:none;
+background:#D7D7D7;
+transition:0.2s;
+border-radius:1cm;
+}
+#range2::-webkit-slider-thumb{
+-webkit-appearance:none;
+appearance:none;
+width:18px;
+height:18px;
+border-radius:50%;
+background:#488AF9;
+cursor: pointer;
+}
+
+#range20{
+-webkit-appearance:none;
+appearance:none;
+width:90%;
+height:6px;
+outline:none;
+background:#D7D7D7;
+transition:0.2s;
+border-radius:1cm;
+}
+#range20::-webkit-slider-thumb{
+-webkit-appearance:none;
+appearance:none;
+width:18px;
+height:18px;
+border-radius:50%;
+background:#488AF9;
+cursor: pointer;
+}
+
+#inp1{
+-webkit-appearance:none;
+appearance:none;
+width:90%;
+height:6px;
+outline:none;
+background:#D7D7D7;
+transition:0.2s;
+border-radius:1cm;
+}
+#inp1::-webkit-slider-thumb{
+-webkit-appearance:none;
+appearance:none;
+width:18px;
+height:18px;
+border-radius:50%;
+background:#488AF9;
+cursor: pointer;
+}
+
+#inp2{
+-webkit-appearance:none;
+appearance:none;
+width:90%;
+height:6px;
+outline:none;
+background:#D7D7D7;
+transition:0.2s;
+border-radius:1cm;
+}
+#inp10::-webkit-slider-thumb{
+-webkit-appearance:none;
+appearance:none;
+width:18px;
+height:18px;
+border-radius:50%;
+background:#488AF9;
+cursor: pointer;
+}
+
+#inp10{
+-webkit-appearance:none;
+appearance:none;
+width:90%;
+height:6px;
+outline:none;
+background:#D7D7D7;
+transition:0.2s;
+border-radius:1cm;
+}
+#inp2::-webkit-slider-thumb{
+-webkit-appearance:none;
+appearance:none;
+width:18px;
+height:18px;
+border-radius:50%;
+background:#488AF9;
+cursor: pointer;
+}
+
+#inp5{
+-webkit-appearance:none;
+appearance:none;
+width:90%;
+height:6px;
+outline:none;
+background:#D7D7D7;
+transition:0.2s;
+border-radius:1cm;
+}
+#inp5::-webkit-slider-thumb{
+-webkit-appearance:none;
+appearance:none;
+width:18px;
+height:18px;
+border-radius:50%;
+background:#488AF9;
+cursor: pointer;
+}
+
+#inp7{
+-webkit-appearance:none;
+appearance:none;
+width:90%;
+height:6px;
+outline:none;
+background:#D7D7D7;
+transition:0.2s;
+border-radius:1cm;
+}
+#inp7::-webkit-slider-thumb{
+-webkit-appearance:none;
+appearance:none;
+width:18px;
+height:18px;
+border-radius:50%;
+background:#488AF9;
+cursor: pointer;
+}
+
+#inp9{
+-webkit-appearance:none;
+appearance:none;
+width:90%;
+height:6px;
+outline:none;
+background:#D7D7D7;
+transition:0.2s;
+border-radius:1cm;
+}
+#inp9::-webkit-slider-thumb{
+-webkit-appearance:none;
+appearance:none;
+width:18px;
+height:18px;
+border-radius:50%;
+background:#488AF9;
+cursor: pointer;
+}
+
+#range30{
+-webkit-appearance:none;
+appearance:none;
+width:90%;
+height:6px;
+outline:none;
+background:#D7D7D7;
+transition:0.2s;
+border-radius:1cm;
+}
+#range30::-webkit-slider-thumb{
+-webkit-appearance:none;
+appearance:none;
+width:18px;
+height:18px;
+border-radius:50%;
+background:#488AF9;
+cursor: pointer;
+}
+
+#range40{
+-webkit-appearance:none;
+appearance:none;
+width:90%;
+height:6px;
+outline:none;
+background:#D7D7D7;
+transition:0.2s;
+border-radius:1cm;
+}
+#range40::-webkit-slider-thumb{
+-webkit-appearance:none;
+appearance:none;
+width:18px;
+height:18px;
+border-radius:50%;
+background:#488AF9;
+cursor: pointer;
+}
+
+   </style>
+</html>
+
+
+
+
+
+
+
